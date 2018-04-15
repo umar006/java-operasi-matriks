@@ -13,37 +13,31 @@ class OperasiMatriks {
         /*
         * auto input matriks pertama
         **/
+        System.out.println("Matriks A");
         int[][] A = new int[3][3];
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 A[i][j] = ThreadLocalRandom.current().nextInt(-16, 16);         //input angka random dengan batas bawah dan atas: -16 dan 16
+                System.out.print(A[i][j] + "\t");
             }
+            System.out.println("");
         }
 
         /*
         * auto input matriks kedua
         **/
+        System.out.println("Matriks B");
         int[][] B = new int[3][3];
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 B[i][j] = ThreadLocalRandom.current().nextInt(-16, 16);         //input angka random dengan batas bawah dan atas: -16 dan 16
+                System.out.print(B[i][j] + "\t");
             }
+            System.out.println("");
         }
 
         OperasiMatriks om = new OperasiMatriks();
-
-        //Mencetak matriks A
-        System.out.println("Matriks A");
-        om.cetak(A);
-        System.out.println("");
-
-        //Mencetak matriks B
-        System.out.println("Matriks B");
-        om.cetak(B);
-        System.out.println("");
-
-        //OPERASI MATRIKS
-        om.play(A, B);
+        om.play(A, B);                                                          //OPERASI MATRIKS
     }
 
     //Method mencetak menu operasi
